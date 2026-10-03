@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e9ddd2">
+  <title>for Sai ♡</title>
+
+  <!-- Handwritten fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bg-music" loop preload="auto">
+  <source src="music/background.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================================================
+     SURPRISE OPENING — intentionally does NOT reveal her birthday immediately
+========================================================== -->
+<section id="opening" class="opening">
+  <div class="opening-grain"></div>
+  <div class="opening-photo photo-ghost g1"></div>
+  <div class="opening-photo photo-ghost g2"></div>
+  <div class="opening-photo photo-ghost g3"></div>
+
+  <div class="opening-step active" id="step-1">
+    <p class="opening-small">hey baby</p>
+    <h1>for my<br>beautiful girl.</h1>
+    <span class="opening-heart">♡</span>
+    <button class="tap-btn" data-next="step-2">tap anywhere to begin</button>
+  </div>
+
+  <div class="opening-step" id="step-2">
+    <p class="opening-small">i've been thinking</p>
+    <h2>what I should give you<br>because I didn't know what</h2>
+    <button class="tap-btn" data-next="step-3">so i made this ♡</button>
+  </div>
+
+  <div class="opening-step" id="step-3">
+    <div class="count-date">3<br><span>october</span></div>
+    <p class="opening-small">and then i remembered...</p>
+    <h2>today is <br>darlings birthday.</h2>
+    <button class="tap-btn reveal-btn" id="reveal-belle"> open it ♡</button>
+  </div>
+
+  <div class="opening-step" id="step-4">
+    <p class="opening-small">happy birthday</p>
+    <h1 class="belle-name">Sai</h1>
+    <p class="opening-final">made all this just for you baby.</p>
+    <button class="enter-btn" id="enter-site">come in ♡</button>
+  </div>
+</section>
+
+<button id="music-btn" class="music-btn" aria-label="play or pause music">
+  <span>♫</span><em>music</em>
+</button>
+
+<main id="site" class="site" hidden>
+
+  <!-- FIRST NOTE -->
+  <section class="scene intro-scene">
+    <div class="desk-shadow"></div>
+    <div class="paper-stack">
+      <div class="paper-back"></div>
+      <article class="torn-note">
+        <p class="tiny-label">3 OCTOBER ♡</p>
+        <h2>today is<br>all about you.</h2>
+        <p>
+          I didn't know what to give you or make for you I kept thinking but now
+          I made this to show how much I appreciate my sweetheart.
+        <p>
+          It's not perfect. But I tried so Hard to make it so I can at least make you
+          Happy
+        <p class="hand-signature">made with love, for Sai ♡</p>
+      </article>
+      <div class="tape top-tape"></div>
+      <span class="pressed-flower">✿</span>
+    </div>
+    <div class="scroll-hint">scroll slowly ↓</div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="scene memories-scene">
+    <div class="chapter-tab">chapter one</div>
+    <h2 class="scene-title">MY gorgeous princess  <span>♡</span></h2>
+    <p class="scene-sub">some of my favourite pictures of you</p>
+
+    <div class="memory-stack">
+      <!-- Replace these files with your photos -->
+      <button class="polaroid p1 memory-card" data-src="images/photos/photo1.jpg" data-caption="one of my favourites ♡">
+        <div class="photo-slot"><img src="images/photos/photo1.jpg" alt="Memory 1"><span>photo 1</span></div><p>one of my favourites ♡</p>
+      </button>
+      <button class="polaroid p2 memory-card" data-src="images/photos/photo2.jpg" data-caption="you're  so cute">
+        <div class="photo-slot"><img src="images/photos/photo2.jpg" alt="Memory 2"><span>photo 2</span></div><p>you're  so cute</p>
+      </button>
+      <button class="polaroid p3 memory-card" data-src="images/photos/photo3.jpg" data-caption="such a cutie.">
+        <div class="photo-slot"><img src="images/photos/photo3.jpg" alt="Memory 3"><span>photo 3</span></div><p>such a cutie.</p>
+      </button>
+      <button class="polaroid p4 memory-card" data-src="images/photos/photo4.jpg" data-caption="soooo beautiful ">
+        <div class="photo-slot"><img src="images/photos/photo4.jpg" alt="Memory 4"><span>photo 4</span></div><p>soooo beautifull</p>
+      </button>
+      <button class="polaroid p5 memory-card" data-src="images/photos/photo5.jpg" data-caption="my beautiful girl">
+        <div class="photo-slot"><img src="images/photos/photo5.jpg" alt="Memory 5"><span>photo 5</span></div><p>my beautiful girl</p>
+      </button>
+    </div>
+    <p class="bottom-note">tap a picture to look closer ♡</p>
+  </section>
+
+  <!-- CUSTOM FLOWER BOUQUET -->
+  <section class="scene bouquet-scene">
+    <div class="chapter-tab">chapter two</div>
+    <h2 class="scene-title">a bouquet<br>for you <span>♡</span></h2>
+
+    <div class="bouquet">
+      <!-- Replace the SVG files in images/flowers with your own flower PNG/JPG/SVG.
+           Keep the filenames, or edit the src paths below. -->
+      <button class="flower-wrap fw1" data-message="You make me smile so much with how great you are.">
+        <img src="images/flowers/flower1.svg" alt="flower 1"><span class="flower-stem"></span>
+      </button>
+      <button class="flower-wrap fw2" data-message="You're the prettiest and most beautiful girl ik.">
+        <img src="images/flowers/flower2.svg" alt="flower 2"><span class="flower-stem"></span>
+      </button>
+      <button class="flower-wrap fw3" data-message="The way you care about me is something I really love about you.">
+        <img src="images/flowers/flower3.svg" alt="flower 3"><span class="flower-stem"></span>
+      </button>
+      <button class="flower-wrap fw4" data-message="You make me laugh even when I don't want to.">
+        <img src="images/flowers/flower4.svg" alt="flower 4"><span class="flower-stem"></span>
+      </button>
+      <button class="flower-wrap fw5" data-message="You're one of the most special people in my life.">
+        <img src="images/flowers/flower5.svg" alt="flower 5"><span class="flower-stem"></span>
+      </button>
+      <button class="flower-wrap fw6" data-message="Basically... I love my baby soo muchhh. ♡">
+        <img src="images/flowers/flower6.svg" alt="flower 6"><span class="flower-stem"></span>
+      </button>
+      <div class="bouquet-paper"></div>
+      <div class="bouquet-ribbon">♡</div>
+    </div>
+
+    <div id="flower-message" class="flower-message">pick a flower to see what it means ♡</div>
+  </section>
+   
+  <!-- PLAYLIST -->
+  <section class="scene playlist-scene">
+    <div class="chapter-tab">chapter four</div>
+    <h2 class="scene-title">a playlist<br>just for today <span>♡</span></h2>
+    <p class="scene-sub">songs I wanted you to hear today.</p>
+
+    <div class="playlist-paper">
+      <div class="album-art">♫</div>
+      <div class="vinyl"></div>
+      <div class="playlist-copy">
+        <p class="tiny-label">FOR SAI — 3 OCTOBER</p>
+        <h3>songs for you</h3>
+      </div>
+
+      <!-- Optional Spotify embed: see README for instructions -->
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53OpWeYG6fCLHu36eATYbz?utm_source=generator&si=0e830d0f94834da3" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- REASONS -->
+  <section class="scene reasons-scene">
+    <div class="chapter-tab">chapter six</div>
+    <h2 class="scene-title">reasons why<br>you're special <span>♡</span></h2>
+    <p class="scene-sub">tap the little notes.</p>
+
+    <div class="note-grid">
+      <button class="reason-note n1"><span>reason #1</span><b>you make my days feel so special.</b></button>
+      <button class="reason-note n2"><span>reason #2</span><b>your jokes are genuinely one of my favourite things.</b></button>
+      <button class="reason-note n3"><span>reason #3</span><b>you inspire me to be better everyday.</b></button>
+      <button class="reason-note n4"><span>reason #4</span><b>I love you and every part of you.</b></button>
+      <button class="reason-note n5"><span>reason #5</span><b>you being in my life is something I'm grateful for.</b></button>
+      <button class="reason-note n6"><span>reason #6</span><b>somehow, you're irreplaceable.</b></button>
+    </div>
+  </section>
+
+  <!-- FINAL LETTER -->
+  <section class="scene final-scene">
+    <div class="chapter-tab">chapter seven</div>
+    <div class="final-paper">
+      <p class="tiny-label">one last letter...</p>
+      <h2>happy birthday,<br><span>Sai.</span></h2>
+      <p>I hope today makes you feel as special as you are.</p>
+      <p>Thank you for being you, for all the memories, the laughs, the talks, and everything in between.</p>
+      <p>Every picture, song and little thing here was chosen because it reminded me of you.</p>
+      <p>I hope this is something you'll come back to one day.</p>
+      <p class="love-line">I love you ♡</p>
+    </div>
+  </section>
+
+  <!-- SURPRISE -->
+  <section class="scene surprise-scene">
+    <p class="tiny-label">one more thing...</p>
+    <h2>a little surprise<br>for you ♡</h2>
+    <button id="surprise-btn" class="surprise-open">click to open →</button>
+    <div id="surprise-card" class="surprise-card">
+      <div class="surprise-photo photo-slot">
+        <img src="images/photos/surprise.jpg" alt="A surprise memory"><span>add your surprise photo here</span>
+      </div>
+      <p>no matter what happens, I hope this next year is better than the last and I hope I can spend it with you</p>
+      <i>♡</i>
+    </div>
+  </section>
+</main>
+
+<!-- PHOTO MODAL -->
+<div class="modal" id="photo-modal">
+  <div class="modal-box photo-box">
+    <button class="close-modal" data-close="photo-modal">×</button>
+    <img id="modal-image" alt="Memory">
+    <p id="modal-caption"></p>
+  </div>
+</div>
+
+<!-- LETTER MODAL -->
+<div class="modal" id="letter-modal">
+  <div class="modal-box letter-box">
+    <button class="close-modal" data-close="letter-modal">×</button>
+    <p class="tiny-label">a little note for you</p>
+    <h2 id="letter-title"></h2>
+    <p id="letter-text"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
